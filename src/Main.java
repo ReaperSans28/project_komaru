@@ -7,6 +7,12 @@
         long sleepers = 999999999999999999L;
         float pi = 3.14f;
         double pi2 = 3.1415926535897932384626433832795028841971;
+        System.out.println("Значение переменной pyaterka c типом int равно " + pyaterka);
+        System.out.println("Значение переменной minecraft c типом int равно " + minecraft);
+        System.out.println("Значение переменной mista c типом int равно " + mista);
+        System.out.println("Значение переменной sleepers c типом int равно " + sleepers);
+        System.out.println("Значение переменной pi c типом int равно " + pi);
+        System.out.println("Значение переменной pi2 c типом int равно " + pi2);
 
         float numb = 27.12f;
         long druid = 987678965549L;
@@ -16,20 +22,20 @@
         short plus = 27897;
         byte c = 67;
 
-        var LudmilaPavlovnasClass = 23;
-        var AnnaSergeevnasClass = 27;
-        var EkaterinaAndreevna = 30;
-        var totalPaper = 480;
-        var totalStudents = LudmilaPavlovnasClass + AnnaSergeevnasClass + EkaterinaAndreevna;
-        var paperForOneStudent = totalPaper / totalStudents;
+        short LudmilaPavlovnasClass = 23;
+        short AnnaSergeevnasClass = 27;
+        short EkaterinaAndreevna = 30;
+        short totalPaper = 480;
+        int totalStudents = LudmilaPavlovnasClass + AnnaSergeevnasClass + EkaterinaAndreevna;
+        int paperForOneStudent = totalPaper / totalStudents;
         System.out.println(paperForOneStudent);
 
-        var bottlesPerTwoMinutes = 16;
-        var bottlesPerMinute = bottlesPerTwoMinutes / 2;
-        var bottlesPerTwentyMinutes = bottlesPerTwoMinutes * 20;
-        var bottlesPerDay = bottlesPerMinute * 1440;
-        var bottlesPerThreeDays = bottlesPerDay * 3;
-        var bottlesPerMonth = bottlesPerThreeDays * 10;
+        short bottlesPerTwoMinutes = 16;
+        int bottlesPerMinute = bottlesPerTwoMinutes / 2;
+        int bottlesPerTwentyMinutes = bottlesPerTwoMinutes * 20;
+        int bottlesPerDay = bottlesPerMinute * 1440;
+        int bottlesPerThreeDays = bottlesPerDay * 3;
+        int bottlesPerMonth = bottlesPerThreeDays * 10;
         System.out.println("За 20 минут машина произвела " + bottlesPerTwentyMinutes + " штук бутылок");
         System.out.println("За 20 минут машина произвела " + bottlesPerDay + " штук бутылок");
         System.out.println("За 20 минут машина произвела " + bottlesPerThreeDays + " штук бутылок");
@@ -55,8 +61,10 @@
         int totalMilkWeight = (milkVolume * milkWeight) / 100;
         int totalIceCreamWeight = iceCreamBriquette * iceCreamWeight;
         int totalEggsWeight = eggs * eggWeight;
-        int totalBreakfastWeight = totalBananaWeight + totalMilkWeight + totalIceCreamWeight + totalEggsWeight;
-        System.out.println(totalBreakfastWeight);
+        int totalBreakfastWeightGram = totalBananaWeight + totalMilkWeight + totalIceCreamWeight + totalEggsWeight;
+        System.out.println(totalBreakfastWeightGram);
+        float totalBreakfastWeightKg = totalBreakfastWeightGram / 1000f;
+        System.out.println(totalBreakfastWeightKg);
 
         int weightNeedToLostKg = 7;
         int weightNeedToLostGram = weightNeedToLostKg * 1000;
@@ -70,17 +78,18 @@
         System.out.println(secondDietDayNeed);
         System.out.println(avgDayNeed);
 
-        int salary1 = 67760;
-        int salary2 = 83690;
-        int salary3 = 76230;
-        double newSalary1 = salary1 * 1.1;
-        double newSalary2 = salary2 * 1.1;
-        double newSalary3 = salary3 * 1.1;
-        double incomeDifference1 = newSalary1 - salary1;
-        double incomeDifference2 = newSalary2 - salary2;
-        double incomeDifference3 = newSalary3 - salary3;
-        System.out.println("Маша теперь получает " + newSalary1 + " рублей. Годовой доход вырос на " + incomeDifference1 + " рублей.");
-        System.out.println("Денис теперь получает " + newSalary2 + " рублей. Годовой доход вырос на " + incomeDifference2 + " рублей.");
-        System.out.println("Кристина теперь получает " + newSalary3 + " рублей. Годовой доход вырос на " + incomeDifference3 + " рублей.");
+        double currentSalaryMasha = 67760;
+        double currentSalaryDenis = 83690;
+        double currentSalaryKristina = 76230;
+        double increasePercentage = 0.10;
+        double newSalaryMasha = currentSalaryMasha * (1 + increasePercentage);
+        double newSalaryDenis = currentSalaryDenis * (1 + increasePercentage);
+        double newSalaryKristina = currentSalaryKristina * (1 + increasePercentage);
+        double yearlyDifferenceMasha = (newSalaryMasha - currentSalaryMasha) * 12;
+        double yearlyDifferenceDenis = (newSalaryDenis - currentSalaryDenis) * 12;
+        double yearlyDifferenceKristina = (newSalaryKristina - currentSalaryKristina) * 12;
+        System.out.println("Маша теперь получает " + newSalaryMasha + " рублей. Годовой доход вырос на " + yearlyDifferenceMasha + " рублей.");
+        System.out.println("Денис теперь получает " + newSalaryDenis + " рублей. Годовой доход вырос на " + yearlyDifferenceDenis + " рублей.");
+        System.out.println("Кристина теперь получает " + newSalaryKristina + " рублей. Годовой доход вырос на " + yearlyDifferenceKristina + " рублей.");
     }
 }
