@@ -10,23 +10,23 @@
 
         // 2 task
         short clientDeviceYear = 2014;
+        String versionMessage;
         if (clientDeviceYear <= 2015) {
-            if (clientOS == 0) {
-                System.out.println("Установите облегченную версию приложения для iOS по ссылке");
-            } else if (clientOS == 1) {
-                System.out.println("Установите облегченную версию приложения для Android по ссылке");
-            }
+            versionMessage = "облегченную версию приложения";
         } else {
-            if (clientOS == 0) {
-                System.out.println("Установите версию приложения для iOS по ссылке");
-            } else if (clientOS == 1) {
-                System.out.println("Установите версию приложения для Android по ссылке");
-            }
+            versionMessage = "версию приложения";
+        }
+        if (clientOS == 0) {
+            System.out.println("Установите " + versionMessage + " для iOS по ссылке");
+        } else if (clientOS == 1) {
+            System.out.println("Установите " + versionMessage + " для Android по ссылке");
+        } else {
+            System.out.println("Неверная операционная система.");
         }
 
         // 3 task
         int year = 2021;
-        if (year < 1584 && year % 100 == 0) {
+        if (year < 1584 || year % 100 == 0) {
             System.out.println(year + " год не является високосным");
         } else if (year % 4 == 0 || year % 400 == 0) {
             System.out.println(year + " год является високосным");
@@ -48,6 +48,9 @@
 
         // 5 task
         byte monthNumber = 12;
+        if (monthNumber > 12 || monthNumber < 1) {
+            System.out.println("Такого месяца нет");
+        }
         switch (monthNumber) {
             case 1, 2, 12:
                 System.out.println(monthNumber + "-й месяц принадлежит к сезону Зима");
