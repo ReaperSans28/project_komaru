@@ -1,69 +1,35 @@
  class Main {
     public static void main(String[] args) {
         // 1 task
-        byte clientOS = 1;
-        if (clientOS == 1) {
-            System.out.println("Установите версию приложения для Android по ссылке");
-        } else if (clientOS == 0) {
-            System.out.println("Установите версию приложения для iOS по ссылке");
-        }
+        for (int i = 1; i <= 10; i ++) System.out.println(i);
 
         // 2 task
-        short clientDeviceYear = 2014;
-        String versionMessage;
-        if (clientDeviceYear <= 2015) {
-            versionMessage = "облегченную версию приложения";
-        } else {
-            versionMessage = "версию приложения";
-        }
-        if (clientOS == 0) {
-            System.out.println("Установите " + versionMessage + " для iOS по ссылке");
-        } else if (clientOS == 1) {
-            System.out.println("Установите " + versionMessage + " для Android по ссылке");
-        } else {
-            System.out.println("Неверная операционная система.");
-        }
+        for (int i = 10; i > 0; i --) System.out.println(i);
 
         // 3 task
-        int year = 2021;
-        if (year < 1584 || year % 100 == 0) {
-            System.out.println(year + " год не является високосным");
-        } else if (year % 4 == 0 || year % 400 == 0) {
-            System.out.println(year + " год является високосным");
-        } else {
-            System.out.println(year + " год не является високосным");
-        }
+        for (int i = 0; i <= 17; i ++) System.out.println(i);
 
         // 4 task
-        byte deliveryDistance = 95;
-        if (deliveryDistance < 20) {
-            System.out.println("Потребуется дней: 1");
-        } else if (deliveryDistance >= 20 && deliveryDistance < 60) {
-            System.out.println("Потребуется дней: 2");
-        } else if (deliveryDistance >= 60 && deliveryDistance < 100) {
-            System.out.println("Потребуется дней: 3");
-        } else if (deliveryDistance > 100) {
-            System.out.println("Доставки нет");
-        }
+        for (int i = 10; i <= -10; i --) System.out.println(i);
 
         // 5 task
-        byte monthNumber = 12;
-        if (monthNumber > 12 || monthNumber < 1) {
-            System.out.println("Такого месяца нет");
-        }
-        switch (monthNumber) {
-            case 1, 2, 12:
-                System.out.println(monthNumber + "-й месяц принадлежит к сезону Зима");
-                break;
-            case 3, 4, 5:
-                System.out.println(monthNumber + "-й месяц принадлежит к сезону Весна");
-                break;
-            case 6, 7, 8:
-                System.out.println(monthNumber + "-й месяц принадлежит к сезону Лето");
-                break;
-            case 9, 10, 11:
-                System.out.println(monthNumber + "-й месяц принадлежит к сезону Осень");
-                break;
-        }
+        for (int year = 1904; year <= 2096; year = year + 4) System.out.println(year + " год является високосным");
+
+        // 6 task
+        for (int i = 7; i <= 98; i += 7) System.out.println(i);
+
+        // 7 task
+        for (int i = 1; i <= 512; i *= 2) System.out.println(i);
+
+        // 8 task
+        int a = 29000;
+        for (int i = 1; i <= 12; i ++, a += 29000) System.out.println("Месяц " + i + ", сумма накоплений равна " + a + " рублей");
+
+        // 9 task
+        double b = 29000;
+        for (int i = 1; i <= 12; i ++, b *= 1.01) System.out.println("Месяц " + i + ", сумма накоплений равна " + b + " рублей");
+
+        // 10 task
+        for (int multiplier = 1; multiplier <= 10; multiplier ++) System.out.println("2 * " + multiplier + " = " + (2 * multiplier));
     }
 }
