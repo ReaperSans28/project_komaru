@@ -7,10 +7,10 @@
         for (int i = 10; i > 0; i --) System.out.println(i);
 
         // 3 task
-        for (int i = 0; i <= 17; i ++) System.out.println(i);
+        for (int i = 0; i < 17; i ++) System.out.println(i);
 
         // 4 task
-        for (int i = 10; i <= -10; i --) System.out.println(i);
+        for (int i = 10; i >= -10; i --) System.out.println(i);
 
         // 5 task
         for (int year = 1904; year <= 2096; year = year + 4) System.out.println(year + " год является високосным");
