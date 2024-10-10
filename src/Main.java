@@ -1,95 +1,46 @@
 class Main {
     public static void main(String[] args) {
-        // 1 task
-        int savings = 0;
-        int months = 0;
-        while (savings < 2_459_000) {
-            savings += 15_000;
-            months++;
-            System.out.println("Месяц " + months + ", сумма накоплений равна " + savings + " рублей");
-        }
+        // 1 and 2 task
+        int [] integer = new int []{1, 2, 3};
+        double [] double1 = new double []{1.57, 7.654, 9.986};
+        short [] short1 = new short []{4, 5, 6};
 
-        //2 task
-        int firstTen = 0;
-        int secondTen = 11;
-
-        while (firstTen < 10) {
-            firstTen++;
-            System.out.print(firstTen + " ");
+        for (int j : integer) {
+            System.out.print(j + ", ");
         }
-        System.out.println("");
-        for (; secondTen > 1; secondTen--) {
-            System.out.print(secondTen + " ");
+        for (double v : double1) {
+            System.out.print(v + ", ");
         }
-        System.out.println("");
+        for (int i = 0; i < short1.length; i++) {
+            if (i + 1 != short1.length) {
+                System.out.print(short1[i] + ", ");
+            } else {
+                System.out.println(short1[i]);
+            }
+        }
 
         // 3 task
-        int populationOfTheCityY = 12_000_000;
-        int birthRate;
-        int diesRate;
-        int year = 2015;
-        int newPopulation = populationOfTheCityY;
-
-        while (year < 2025) {
-            year++;
-            birthRate = (populationOfTheCityY / 1000) * 17;
-            diesRate = (populationOfTheCityY / 1000) * 8;
-            newPopulation = newPopulation + (birthRate - diesRate);
-            System.out.println("Год " + year + ", численность населения составляет " + newPopulation);
+        for (int i = integer.length - 1; i >= 0; i--) {
+            System.out.print(integer[i] + ", ");
         }
+        for (int i = double1.length - 1; i >= 0; i--) {
+            System.out.print(double1[i] + ", ");
+        }
+        for (int i = short1.length - 1; i >= 0; i--) {
+            System.out.print(short1[i]);
+            if (i > 0) {
+                System.out.print(", ");
+            }
+        }
+        System.out.println();
 
         // 4 task
-        double contribution1 = 15_000;
-        int monthsNeed1 = 0;
-
-        while (contribution1 < 12_000_000) {
-            contribution1 *= 1.07;
-            monthsNeed1++;
-            System.out.println("Месяц " + monthsNeed1 + ", сумма накоплений равна " + contribution1 + " рублей");
-        }
-
-        // 5 task
-        double contribution2 = 15_000;
-        int monthsNeed2 = 0;
-
-        while (contribution2 < 12_000_000) {
-            contribution2 *= 1.07;
-            monthsNeed2++;
-            if (monthsNeed2 % 6 == 0) {
-                System.out.println("Месяц " + monthsNeed2 + ", сумма накоплений равна " + contribution2 + " рублей");
+        for (int j : integer) {
+            if (j % 2 != 0) {
+                System.out.print((j + 1) + " ");
+            } else {
+                System.out.print(j + " ");
             }
         }
-
-        // 6 task
-        double contribution3 = 15_000;
-        int monthsNeed3 = 0;
-
-        while (monthsNeed3 < 9 * 12) {
-            contribution3 *= 1.07;
-            monthsNeed3++;
-            if (monthsNeed3 % 6 == 0) {
-                System.out.println("Месяц " + monthsNeed3 + ", сумма накоплений равна " + contribution3 + " рублей");
-            }
-        }
-
-        // 7 task
-        int friday = 4;
-
-        while (friday < 31) {
-            System.out.println("Сегодня пятница, " + friday + "-е число. Необходимо подготовить отчет");
-            friday += 7;
-        }
-
-        // 8 task
-        int twoHundredYearsAgo = year - 200;
-        int yearsPast = 0;
-
-        while (yearsPast < year) {
-            if (yearsPast > twoHundredYearsAgo) {
-                System.out.println(yearsPast);
-            }
-            yearsPast += 79;
-        }
-
     }
 }
