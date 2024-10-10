@@ -18,21 +18,22 @@ class Main {
             System.out.print(firstTen + " ");
         }
         System.out.println("");
-        while (secondTen > 1) {
-            secondTen--;
+        for (; secondTen > 1; secondTen--) {
             System.out.print(secondTen + " ");
         }
         System.out.println("");
 
         // 3 task
         int populationOfTheCityY = 12_000_000;
-        int birthRate = (populationOfTheCityY / 1000) * 17;
-        int diesRate = (populationOfTheCityY / 1000) * 8;
+        int birthRate;
+        int diesRate;
         int year = 2015;
         int newPopulation = populationOfTheCityY;
 
         while (year < 2025) {
             year++;
+            birthRate = (populationOfTheCityY / 1000) * 17;
+            diesRate = (populationOfTheCityY / 1000) * 8;
             newPopulation = newPopulation + (birthRate - diesRate);
             System.out.println("Год " + year + ", численность населения составляет " + newPopulation);
         }
