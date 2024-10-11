@@ -33,18 +33,8 @@ class Main {
         // 4 task
         char[] reverseName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
 
-        int left = 0;
-        int right = reverseName.length - 1;
-
-        while (left < right) {
-            char temp = reverseName[left];
-            reverseName[left] = reverseName[right];
-            reverseName[right] = temp;
-
-            left++;
-            right--;
+        for (int i = reverseName.length - 1; i >= 0; i--) {
+            System.out.print(reverseName[i]);
         }
-
-        System.out.println(new String(reverseName));
     }
 }
