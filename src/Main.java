@@ -1,46 +1,50 @@
 class Main {
     public static void main(String[] args) {
-        // 1 and 2 task
-        int [] integer = new int []{1, 2, 3};
-        double [] double1 = new double []{1.57, 7.654, 9.986};
-        short [] short1 = new short []{4, 5, 6};
+        // 1 task
+        int[] spending = new int[]{10000, 9000, 40000, 5000, 7000};
+        int spendingSum = 0;
+        for (int j : spending) {
+            spendingSum += j;
+        }
+        System.out.println("Сумма трат за месяц составила " + spendingSum + " рублей");
 
-        for (int j : integer) {
-            System.out.print(j + ", ");
-        }
-        for (double v : double1) {
-            System.out.print(v + ", ");
-        }
-        for (int i = 0; i < short1.length; i++) {
-            if (i + 1 != short1.length) {
-                System.out.print(short1[i] + ", ");
-            } else {
-                System.out.println(short1[i]);
+        // 2 task
+        int[] spending2 = new int[]{10000, 9000, 40000, 5000, 7000};
+        int maxSpending = 0;
+        int minSpending = spending2[0];
+        for (final int current : spending2) {
+            if (current > maxSpending) {
+                maxSpending = current;
+            }
+            if (current < minSpending) {
+                minSpending = current;
             }
         }
+        System.out.println("Минимальная сумма трат за неделю составила " + minSpending + " рублей. Максимальная сумма трат за неделю составила " + maxSpending + " рублей");
 
         // 3 task
-        for (int i = short1.length - 1; i >= 0; i--) {
-            System.out.print(short1[i] + ", ");
+        int[] spending3 = new int[]{10001, 9000, 40000, 5000, 7000};
+        double spendingSum2 = 0;
+        for (int j : spending3) {
+            spendingSum2 += j;
         }
-        for (int i = double1.length - 1; i >= 0; i--) {
-            System.out.print(double1[i] + ", ");
-        }
-        for (int i = integer.length - 1; i >= 0; i--) {
-            System.out.print(integer[i]);
-            if (i > 0) {
-                System.out.print(", ");
-            }
-        }
-        System.out.println();
+        System.out.println("Средняя сумма трат за месяц составила " + spendingSum2 / spending3.length + " рублей");
 
         // 4 task
-        for (int j : integer) {
-            if (j % 2 != 0) {
-                System.out.print((j + 1));
-            } else {
-                System.out.print(j);
-            }
+        char[] reverseName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
+
+        int left = 0;
+        int right = reverseName.length - 1;
+
+        while (left < right) {
+            char temp = reverseName[left];
+            reverseName[left] = reverseName[right];
+            reverseName[right] = temp;
+
+            left++;
+            right--;
         }
+
+        System.out.println(new String(reverseName));
     }
 }
