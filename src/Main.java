@@ -8,14 +8,7 @@ class Main {
         System.out.println("Ф. И. О. сотрудника — " + fullName);
 
         // 2 task
-        String fullNameUpper1 = fullName.replace("v", "V");
-        String fullNameUpper2 = fullNameUpper1.replace("a", "A");
-        String fullNameUpper3 = fullNameUpper2.replace("n", "N");
-        String fullNameUpper4 = fullNameUpper3.replace("o", "O");
-        String fullNameUpper5 = fullNameUpper4.replace("i", "I");
-        String fullNameUpper6 = fullNameUpper5.replace("c", "C");
-        String fullNameUpper = fullNameUpper6.replace("h", "H");
-
+        String fullNameUpper = fullName.toUpperCase();
         System.out.println("Данные Ф. И. О. сотрудника для заполнения отчета — " + fullNameUpper);
 
         // 3 task
