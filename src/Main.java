@@ -1,46 +1,16 @@
-class Main {
-    // 1 task
-    public static void isHighGradeYear(int year) {
-        if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
-            System.out.println(year + " год — високосный год");
-        } else {
-            System.out.println(year + " год — невисокосный год");
-        }
-    }
-
-    // 2 task
-    public static void version(int clientOS, int clientDeviceYear) {
-        String versionMessage;
-        if (clientDeviceYear <= 2015) {
-            versionMessage = "облегченную версию приложения";
-        } else {
-            versionMessage = "версию приложения";
-        }
-        if (clientOS == 0) {
-            System.out.println("Установите " + versionMessage + " для iOS по ссылке");
-        } else if (clientOS == 1) {
-            System.out.println("Установите " + versionMessage + " для Android по ссылке");
-        } else {
-            System.out.println("Неверная операционная система.");
-        }
-    }
-
-    // 3 task
-    public static void cardDelivery(int deliveryDistance) {
-        if (deliveryDistance < 20) {
-            System.out.println("Потребуется дней: 1");
-        } else if (deliveryDistance < 60) {
-            System.out.println("Потребуется дней: 2");
-        } else if (deliveryDistance < 100) {
-            System.out.println("Потребуется дней: 3");
-        } else if (deliveryDistance > 100) {
-            System.out.println("Доставки нет");
-        }
-    }
-
+public class Main {
     public static void main(String[] args) {
-        isHighGradeYear(2021);
-        version(1, 2016);
-        cardDelivery(40);
+        Author author1 = new Author("Алан", "Мур");
+        Author author2 = new Author("Араки", "Хирохико");
+
+        Book book1 = new Book("Хранители", author1, 1986);
+        Book book2 = new Book("JOJO A-Go! Go!", author2, 2000);
+
+        System.out.println("Книга: " + book1.getTitle() + ", Автор: " + book1.getAuthor().getFirstName() + " " + book1.getAuthor().getLastName() + ", Год: " + book1.getPublicationYear());
+        System.out.println("Книга: " + book2.getTitle() + ", Автор: " + book2.getAuthor().getFirstName() + " " + book2.getAuthor().getLastName() + ", Год: " + book2.getPublicationYear());
+
+        book1.setPublicationYear(1987);
+        System.out.println("После изменения года публикации:");
+        System.out.println("Книга: " + book1.getTitle() + ", Автор: " + book1.getAuthor().getFirstName() + " " + book1.getAuthor().getLastName() + ", Год: " + book1.getPublicationYear());
     }
 }
